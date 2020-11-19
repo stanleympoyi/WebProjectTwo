@@ -1,13 +1,10 @@
-var express = require('express');
+const express = require("express");
+const path = require("path");
 
-var app = express();
+const app = express();
 
-app.set('port', 3000);
-
-app.get('/', function(req, res) {
-    res.type('text/plain');
-    res.send('Welcome to the main page!');
+app.get("/*", (req, res) => {
+    res.sendFile(path.resolve("frontend", "index.html"));
 });
-app.listen(app.get('port'), function() {
-    console.log('Express started on http://localhost:' + app.get('port') + '; press Ctrl-C to terminate.');
-});
+
+app.listen(process.env.POST || 1430, () => console.log("Server running...."));
