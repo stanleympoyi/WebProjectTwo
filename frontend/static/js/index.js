@@ -12,8 +12,11 @@ const router = async() => {
         };
     });
 
+    let match = potentialMatches.find(potentialMatch => potentialMatch.isMatch);
+
     console.log(potentialMatches);
 };
+
 document.addEventListener("DOMContentLoaded", () => {
     router();
 });
