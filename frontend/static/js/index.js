@@ -4,7 +4,7 @@ const router = async() => {
         { path: "/posts", view: () => console.log("Viewing Posts") },
         { path: "/settings", view: () => console.log("Viewing Settings") },
     ];
-    // Test each route for potential match
+    // Test each route for potential matches
     const potentialMatches = routes.map(route => {
         return {
             route: route,
